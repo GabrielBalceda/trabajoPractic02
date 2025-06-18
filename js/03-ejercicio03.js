@@ -7,20 +7,14 @@ guión -.
 
 let textos = "";
 
-do{
-    const letras = prompt('ingresa lo que deseas concatenar:')
-    
-    if (textos.length === 0)
-    {
-        textos = letras
-    }
-    else
-    {
+do {
+  const letras = prompt("ingresa lo que deseas concatenar:");
 
-        textos = textos +'-'+ letras
-    }
-}
-while (confirm('Preciona aceptar para guardar'))
+  if (textos.length === 0) {
+    textos = letras;
+  } else {
+    textos = textos + "-" + letras;
+  }
+} while (confirm("Preciona aceptar para guardar"));
 
-
-document.writeln(textos)
+document.writeln(textos);
