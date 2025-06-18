@@ -5,18 +5,22 @@ guión -.
 
 */
 
-let textos = [];
-let entrada;
+let textos = "";
 
-while (true) {
-  entrada = prompt("Ingresá un texto (Cancelar para finalizar):");
-  if (entrada === null) {
-    break; // usuario presiona cancelar
-  }
-  // push guarda eel texto que el usuario ingresa array
-  textos.push(entrada);
+do{
+    const letras = prompt('ingresa lo que deseas concatenar:')
+    
+    if (textos.length === 0)
+    {
+        textos = letras
+    }
+    else
+    {
+
+        textos = textos +'-'+ letras
+    }
 }
+while (confirm('Preciona aceptar para guardar'))
 
-// Conecta el texto con guión
-let resultado = textos.join(" - "); //une todos los elementos arr
-alert("Texto final: " + resultado);
+
+document.writeln(textos)
